@@ -1,0 +1,72 @@
+body {
+  background-color: #eeeeee;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  overflow: hidden;
+  background-color: #333;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  width: 50%;
+  float: left;
+}
+
+li p {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li button {
+  background-color: #a149fa;
+  border-width: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #f9f5e7;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding: 2px 5px;
+  text-align: center;
+}
+
+.container-search {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+.container-search > input {
+  padding: 14px;
+  width: 80%;
+}
+
+#cardList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
