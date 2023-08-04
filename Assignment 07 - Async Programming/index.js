@@ -2,7 +2,7 @@ const searchElement = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
 const searchItemsList = document.querySelector("#searchItemsList");
 
-const initData = () => {
+export const initData = () => {
   searchItemsList.innerHTML = '<img src="assets/loading.gif" alt="">';
 
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
@@ -31,7 +31,7 @@ const initData = () => {
     });
 };
 
-const searchFood = () => {
+export const searchFood = () => {
   searchItemsList.innerHTML = "";
 
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchElement.value}`, {
