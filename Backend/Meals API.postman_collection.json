@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "a4edc944-9887-4216-853a-657bed72f382",
+		"name": "Meals API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26923677"
+	},
+	"item": [
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "Create Meal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZnJlbmdreS5nZ0BnbWFpbC5jb20iLCJuYW1lIjoiZnJlbmdreSIsInVzZXJuYW1lIjoiZnJlbmdreWRldiIsImlhdCI6MTY5NTY1NTc5NiwiZXhwIjoxNjk1NzQyMTk2fQ.RSoWj_9euGIq3lEIBERblozINC2L1-YdPCfYbxavamA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corba\",\n    \"image_url\": \"https://www.themealdb.com/images/media/meals/58oia61564916529.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/meals/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Meals",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZnJlbmdreS5nZ0BnbWFpbC5jb20iLCJuYW1lIjoiZnJlbmdreSIsInVzZXJuYW1lIjoiZnJlbmdreWRldiIsImlhdCI6MTY5NTY1NTc5NiwiZXhwIjoxNjk1NzQyMTk2fQ.RSoWj_9euGIq3lEIBERblozINC2L1-YdPCfYbxavamA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/meals/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Meals",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZnJlbmdreS5nZ0BnbWFpbC5jb20iLCJuYW1lIjoiZnJlbmdreSIsInVzZXJuYW1lIjoiZnJlbmdreWRldiIsImlhdCI6MTY5NTY1NTc5NiwiZXhwIjoxNjk1NzQyMTk2fQ.RSoWj_9euGIq3lEIBERblozINC2L1-YdPCfYbxavamA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Corba2\",\n    \"image_url\": \"http://www.themealdb.com/images/media/meals/58oia61564916529.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/meals/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Meal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZnJlbmdreS5nZ0BnbWFpbC5jb20iLCJuYW1lIjoiZnJlbmdreSIsInVzZXJuYW1lIjoiZnJlbmdreWRldiIsImlhdCI6MTY5NTY1NTc5NiwiZXhwIjoxNjk1NzQyMTk2fQ.RSoWj_9euGIq3lEIBERblozINC2L1-YdPCfYbxavamA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/meals/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"frengky\",\n    \"username\": \"frengkydev\",\n    \"email\": \"frengky.gg@gmail.com\",\n    \"password\": \"Test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZnJlbmdreS5nZ0BnbWFpbC5jb20iLCJuYW1lIjoiZnJlbmdreSIsInVzZXJuYW1lIjoiZnJlbmdreWRldiIsImlhdCI6MTY5NTY1NTc5NiwiZXhwIjoxNjk1NzQyMTk2fQ.RSoWj_9euGIq3lEIBERblozINC2L1-YdPCfYbxavamA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"frengky.gg@gmail.com\",\n    \"password\": \"Test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
