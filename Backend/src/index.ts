@@ -1,13 +1,16 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Express, Application, Request, Response, Router } from 'express';
 import Database from './config/database';
 import MealsRouter from './router/MealsRouter';
 import AuthenticationRouter from './router/AuthenticationRouter';
+import Swagger from './utils/Swagger';
 
 class App {
 	public app: Application;
+	public router: Router;
 
 	constructor() {
 		this.app = express();
+		this.router = Router();
 		this.databaseSync();
 		this.plugins();
 		this.routes();
@@ -37,5 +40,7 @@ const port: number = 8000;
 const app = new App().app;
 
 app.listen(port, () => {
+	Swagger.swaggerDocs(app, port);
+
 	console.log('server started...');
 });
